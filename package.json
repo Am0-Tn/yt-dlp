@@ -1,0 +1,15 @@
+{
+  "name": "anime-stream-resolver",
+  "version": "1.0.0",
+  "description": "API resolver for anime direct streams using yt-dlp",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fastify": "^4.26.0",
+    "yt-dlp-wrap": "^2.3.9"
+  }
+}
