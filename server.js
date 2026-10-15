@@ -1,8 +1,11 @@
 import Fastify from 'fastify';
-import YTDlpWrap from 'yt-dlp-wrap';
+import YTDlpWrapPkg from 'yt-dlp-wrap';
 import dotenv from 'dotenv';
 
 dotenv.config();
+
+// التصحيح لتوافق ESM مع CommonJS
+const YTDlpWrap = YTDlpWrapPkg.default || YTDlpWrapPkg;
 
 const fastify = Fastify({ logger: true });
 const ytDlpWrap = new YTDlpWrap();
