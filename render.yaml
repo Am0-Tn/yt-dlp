@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: media-link-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -w 2 -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:$PORT --timeout 120
+    envVars:
+      - key: API_SECRET
+        sync: false
+      - key: TMDB_API_KEY
+        sync: false
+      - key: CACHE_TTL
+        value: "3600"
+      - key: ENABLE_PROXY
+        value: "false"
+      - key: MAX_CONCURRENT
+        value: "4"
+      - key: PYTHON_VERSION
+        value: "3.11.9"
