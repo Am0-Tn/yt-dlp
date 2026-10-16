@@ -132,14 +132,3 @@ yt-dlp-plugins
 
 # Packages
 yt_dlp_ejs/
-__pycache__/
-*.py[cod]
-*$py.class
-.env
-.venv/
-venv/
-env/
-*.log
-.DS_Store
-.idea/
-.vscode/
